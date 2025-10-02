@@ -1,0 +1,5 @@
+feedback_id,from_employee_id,to_employee_id,anonymous,message,timestamp,rating,sentiment,sentiment_score,context
+FB001,EMP0011,EMP0010,False,Great implementation of the customer feedback flow. Clarified requirements well.,2024-05-01T15:00:00Z,5,positive,0.92,peer
+FB002,,EMP0008,True,"Appreciate the cleanup of the API endpoints, but please add more tests next time.",2024-04-20T09:00:00Z,3,neutral,0.1,peer
+FB003,EMP0004,EMP0013,False,Fantastic closing of the enterprise deal — great job!,2024-03-30T10:00:00Z,5,positive,0.95,manager
+FB004,EMP0013,EMP0004,False,Would like clearer guidance on quotas and territory from leadership.,2024-04-02T11:30:00Z,2,negative,-0.6,peer

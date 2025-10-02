@@ -1,0 +1,23 @@
+employee_id,name,relationship,phone,email,address,is_primary
+EMP0001,Jill Thompson,Spouse,+1-415-555-0201,jill.thompson@example.com,"1 Market St, SF",True
+EMP0002,Michael Chen,Brother,+1-415-555-0202,m.chen@example.com,"Oakland, CA",True
+EMP0003,Peter Wang,Father,+1-415-555-0203,p.wang@example.com,"Palo Alto, CA",True
+EMP0004,Ana Johnson,Spouse,+1-415-555-0204,ana.johnson@example.com,SF,True
+EMP0005,Luis Rodriguez,Partner,+1-415-555-0205,luis.rodriguez@example.com,SF,True
+EMP0006,Min Kim,Mother,+1-415-555-0206,min.kim@example.com,"Seoul, KR",True
+EMP0007,Kavita Patel,Mother,+1-415-555-0207,k.patel@example.com,"Davis, CA",True
+EMP0008,Rosa Lopez,Sister,+1-415-555-0208,rosa.lopez@example.com,"Seattle, WA",True
+EMP0009,Arjun Singh,Father,+1-415-555-0209,arjun.singh@example.com,"Mumbai, IN",True
+EMP0010,Farah Khan,Sister,+1-415-555-0210,farah.khan@example.com,"Oakland, CA",True
+EMP0011,Mary Smith,Spouse,+1-415-555-0211,mary.smith@example.com,NYC,True
+EMP0012,Imran Khan,Spouse,+1-415-555-0212,imran.khan@example.com,"Oakland, CA",True
+EMP0013,Luisa Mendoza,Spouse,+1-415-555-0213,luisa.mendoza@example.com,SF,True
+EMP0014,Daniel Green,Partner,+1-415-555-0214,daniel.green@example.com,SF,True
+EMP0015,Karen Brown,Spouse,+1-415-555-0215,k.brown@example.com,SF,True
+EMP0016,Preeti Shah,Mother,+1-415-555-0216,preeti.shah@example.com,"Ahmedabad, IN",True
+EMP0017,Diego Martinez,Brother,+1-415-555-0217,diego.m@example.com,"LA, CA",True
+EMP0018,Linh Nguyen,Mother,+1-415-555-0218,linh.nguyen@example.com,San Jose,True
+EMP0019,Ollie Ali,Brother,+1-415-555-0219,ollie.ali@example.com,London,True
+EMP0020,Laura Lopez,Spouse,+1-415-555-0220,laura.lopez@example.com,SF,True
+EMP0021,Hannah Wright,Sister,+1-415-555-0221,hannah.wright@example.com,LA,True
+EMP0022,Carlos Fernandez,Spouse,+1-415-555-0222,c.fernandez@example.com,SF,True

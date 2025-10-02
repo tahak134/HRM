@@ -1,0 +1,4 @@
+document_id,employee_id,name,type,category,description,tags,is_confidential,version,file_name,file_path,file_size,mime_type,uploaded_by,uploaded_at,expires_at,status
+DOC0001,EMP0002,Employment Contract - Sarah,contract,employment,Signed employment contract,"['contract', 'employment', 'pdf']",True,1,EMP0002_contract.pdf,uploads/EMP0002_contract.pdf,152000,application/pdf,hr-admin,2016-03-01T09:05:00Z,,approved
+DOC0002,EMP0005,UX Certification - Elena,certificate,certification,NN/g UX Certificate,"['certificate', 'ux', 'image', 'jpg']",False,1,EMP0005_ux_cert.jpg,uploads/EMP0005_ux_cert.jpg,82000,image/jpeg,elena,2020-01-05T10:00:00Z,,approved
+DOC0003,EMP0013,Customer Contract - ACME LLC,contract,customer,Signed customer contract (sales),"['contract', 'customer', 'pdf']",True,2,EMP0013_customer_contract_v2.pdf,uploads/EMP0013_contract_v2.pdf,240000,application/pdf,carlos,2023-12-12T09:00:00Z,2025-12-12T00:00:00Z,pending
