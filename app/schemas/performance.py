@@ -57,29 +57,10 @@ class GoalResponse(MongoModel, GoalBase):
     owner_employee_id: Optional[str] = None
     risk_factors: List[str] = []
     recommendations: List[str] = []
+    department: Optional[str] = None
     created_at: datetime
     updated_at: datetime
-    owner_id: Optional[str] = Field(alias="owner_employee_id", default=None)
     milestones: List[MilestoneResponse] = []
-
-    @classmethod
-    def from_mongo(cls, goal):
-        # Convert Beanie/Mongo object → dict
-        if hasattr(goal, "dict"):
-            data = goal.dict()
-        else:
-            data = dict(goal)
-
-        # normalize ObjectId
-        data["id"] = str(data.get("_id") or data.get("id")) or str(goal.id)
-
-        # make sure owner is a plain string, not coroutine
-        if isinstance(data.get("owner_employee_id"), (bytes, bytearray)):
-            data["owner_employee_id"] = data["owner_employee_id"].decode()
-        elif not isinstance(data.get("owner_employee_id"), str):
-            data["owner_employee_id"] = str(data.get("owner_employee_id") or "")
-
-        return cls.model_validate(data)
 
 class GoalDependencyCreate(BaseModel):
     from_goal_id: str
@@ -123,15 +104,9 @@ class PerformanceReviewResponse(MongoModel):
     created_at: datetime
     performance_prediction: Optional[Dict] = None
 
-    @classmethod
-    def from_mongo(cls, review: PerformanceReview):
-        data = review.dict()
-        data["id"] = str(review.id)   # Convert ObjectId -> str
-        return cls.model_validate(data)
-
-
 class FeedbackCreate(BaseModel):
     employee_id: str
+    giver_id: str
     feedback_type: FeedbackType
     content: str
     rating: Optional[float] = None
@@ -150,12 +125,6 @@ class FeedbackResponse(MongoModel):
     rating: Optional[float] = None
     created_at: datetime
     is_read: bool
-
-    @classmethod
-    def from_mongo(cls, fb: Feedback):
-        data = fb.dict()
-        data["id"] = str(fb.id)   # Convert ObjectId -> str
-        return cls.model_validate(data)
 
 class CoachingSessionCreate(BaseModel):
     employee_id: str

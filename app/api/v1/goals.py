@@ -2,10 +2,10 @@ from fastapi import APIRouter, HTTPException, Query, Depends
 from typing import List, Optional
 from app.schemas.performance import GoalCreate, GoalUpdate, GoalResponse
 from app.models.performance import Goal
-from app.utils.serializer import serialize_goal
+from app.core.security import get_current_user
 
 router = APIRouter(prefix="/api/v1/goals", tags=["goals"])
-from app.core.security import get_current_user
+
 
 @router.get("/", response_model=List[GoalResponse])
 async def get_goals(department: Optional[str] = Query(None)):
@@ -19,7 +19,7 @@ async def get_goals(department: Optional[str] = Query(None)):
             query["department"] = department
 
         goals = await Goal.find(query).to_list()
-        return [GoalResponse.from_mongo(g) for g in goals]
+        return goals
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
